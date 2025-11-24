@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Platos registrados</h2>
+
+<ul>
+    {% for d in dishes %}
+        <li>
+            <a href="/dish/{{ d.id }}">{{ d.name }}</a> — ${{ d.price }}
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>{{ dish.name }}</h2>
+
+<p><strong>Descripción:</strong> {{ dish.description }}</p>
+<p><strong>Precio:</strong> {{ dish.price }}</p>
+<p><strong>Ingredientes:</strong> {{ dish.ingredients }}</p>
+<p><strong>Categoría:</strong> {{ dish.category.name if dish.category else "—" }}</p>
+
+{% endblock %}
